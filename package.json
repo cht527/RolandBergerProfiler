@@ -1,0 +1,24 @@
+{
+  "name": "rolandbergergraph",
+  "version": "1.0.0",
+  "description": "罗兰贝格消费者价值观分布图",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/cht527/rolandBergerGraph.git"
+  },
+  "keywords": [
+    "罗兰贝格",
+    "rolandberger",
+    "消费者价值观"
+  ],
+  "author": "Cao Haitao",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/cht527/rolandBergerGraph/issues"
+  },
+  "homepage": "https://github.com/cht527/rolandBergerGraph#readme"
+}
