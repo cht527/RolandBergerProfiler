@@ -10,12 +10,14 @@
     "/es"
   ],
   "scripts": {
+    "commit": "git-cz",
     "build": "NODE_ENV=production rollup -c",
     "dev": "rollup -c -w",
     "lint-fix": "eslint --cache --ext .js,.jsx,.ts,.tsx --fix --format=pretty  && npm run lint:prettier",
     "lint:prettier": "npm run prettier &&  git diff && prettier --version && prettier --check \"src/**.{js,jsx,tsx,ts,less,json}\" --end-of-line auto",
     "prettier": "prettier --write \"**/**.{js,jsx,tsx,ts,less,json}\"",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "release": "standard-version"
   },
   "repository": {
     "type": "git",
@@ -45,22 +47,26 @@
   "devDependencies": {
     "@commitlint/cli": "^13.1.0",
     "@commitlint/config-conventional": "^13.1.0",
+    "commitlint-config-cz": "^0.13.2",
+    "cz-conventional-changelog": "^3.3.0",
+    "cz-customizable": "^6.3.0",
     "prettier": "^2.3.2",
     "rollup-plugin-commonjs": "^10.1.0",
     "rollup-plugin-eslint": "^7.0.0",
     "rollup-plugin-node-resolve": "^5.2.0",
-    "rollup-plugin-terser": "^7.0.2"
+    "rollup-plugin-terser": "^7.0.2",
+    "standard-version": "^9.3.1"
+  },
+  "config": {
+    "commitizen": {
+      "path": "node_modules/cz-customizable"
+    }
   },
   "husky": {
     "hooks": {
       "pre-commit": "lint-staged",
-      "commit-msg": "commitlint --env HUSKY_GIT_PARAMS"
+      "commit-msg": "commitlint -e $GIT_PARAMS"
     }
-  },
-  "commitlint": {
-    "extends": [
-        "@commitlint/config-conventional"
-    ]
   },
   "lint-staged": {
     "*.{js,ts}": [
