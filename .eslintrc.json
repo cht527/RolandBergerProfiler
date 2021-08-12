@@ -1,0 +1,30 @@
+{
+  "env": {
+    "browser": true,
+    "es6": true,
+    "node": true
+  },
+  "extends": "eslint:recommended",
+  "globals": {
+    "Atomics": "readonly",
+    "SharedArrayBuffer": "readonly",
+    "ENV": true
+  },
+  "parserOptions": {
+    "ecmaVersion": 2018,
+    "sourceType": "module"
+  },
+  "rules": {
+    "linebreak-style": ["error", "unix"],
+    "quotes": ["error", "single"],
+    "space-before-function-paren": [0, "always"],
+    "no-eval": 0,
+    "no-continue": 0,
+    "no-unused-vars": [
+      0,
+      {
+        "ignoreRestSiblings": true
+      }
+    ]
+  }
+}
