@@ -65,7 +65,6 @@
   "lint-staged": {
     "*.{js,ts}": [
       "npm run lint-fix",
-      "npm run commitmsg",
       "git add"
     ]
   }
