@@ -15,7 +15,6 @@
     "lint-fix": "eslint --cache --ext .js,.jsx,.ts,.tsx --fix --format=pretty  && npm run lint:prettier",
     "lint:prettier": "npm run prettier &&  git diff && prettier --version && prettier --check \"src/**.{js,jsx,tsx,ts,less,json}\" --end-of-line auto",
     "prettier": "prettier --write \"**/**.{js,jsx,tsx,ts,less,json}\"",
-    "commitmsg": "commitlint -e $GIT_PARAMS",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -54,8 +53,14 @@
   },
   "husky": {
     "hooks": {
-      "pre-commit": "lint-staged"
+      "pre-commit": "lint-staged",
+      "commit-msg": "commitlint --env HUSKY_GIT_PARAMS"
     }
+  },
+  "commitlint": {
+    "extends": [
+        "@commitlint/config-conventional"
+    ]
   },
   "lint-staged": {
     "*.{js,ts}": [
