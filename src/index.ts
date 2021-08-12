@@ -1,4 +1,8 @@
-export default function a(name) {
-  console.log(name);
+import { init } from './core/rolandBerger'
 
-}
+export default {
+  init() {
+      // @ts-ignore
+      return init.apply(null, arguments);
+  }
+};
