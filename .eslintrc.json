@@ -4,13 +4,15 @@
     "es6": true,
     "node": true
   },
-  "extends": "eslint:recommended",
+  "extends": ["prettier"],
   "globals": {
     "Atomics": "readonly",
     "SharedArrayBuffer": "readonly",
     "ENV": true
   },
   "parserOptions": {
+    "project": "./tsconfig.json",
+    "tsconfigRootDir": ".",
     "ecmaVersion": 2018,
     "sourceType": "module"
   },

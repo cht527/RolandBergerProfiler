@@ -1,8 +1,8 @@
-import { init } from './core/rolandBerger'
+import { init } from '../src/core/rolandBerger';
 
 export default {
-  init() {
-      // @ts-ignore
-      return init.apply(null, arguments);
-  }
+	init() {
+		// @ts-ignore
+		return init.apply(null, arguments);
+	},
 };

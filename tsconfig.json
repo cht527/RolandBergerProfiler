@@ -1,21 +1,34 @@
 {
   "compilerOptions": {
-    "target": "es5",
-    "lib": ["dom", "dom.iterable", "esnext"],
-    "allowJs": true,
-    "baseUrl": "./",
-    "skipLibCheck": true,
-    "esModuleInterop": true,
-    "allowSyntheticDefaultImports": true,
-    "strict": true,
-    "forceConsistentCasingInFileNames": true,
-    "noFallthroughCasesInSwitch": true,
     "module": "esnext",
+    "outDir": "dist",
+    "target": "esnext",
+    "baseUrl": ".", // 工作根目录
+    "sourceMap": true,
+    "declarationDir": "dist/es",
+    "lib": ["dom", "dom.iterable", "esnext"],
+    "allowJs": false,
+    "allowSyntheticDefaultImports": true,
+    "forceConsistentCasingInFileNames": true,
+    "noImplicitReturns": true,
+    "suppressImplicitAnyIndexErrors": true,
+    "noUnusedLocals": true,
+    "experimentalDecorators": true,
+    "strict": true,
+    "skipLibCheck": true,
     "moduleResolution": "node",
-    "resolveJsonModule": true,
-    "isolatedModules": true,
-    "noEmit": true,
-    "typeRoots": ["./node_modules/@types/", "./src/typings"]
+    "esModuleInterop": true,
+     // 只生成类型文件，不转换代码
+     "declaration": true,
+     "emitDeclarationOnly": true,
   },
-  "include": ["src"]
+  "include": ["src/**/*"],
+  "exclude":[
+    "node_modules",
+    "build",
+    "dist",
+    "lib",
+    "es",
+    "dist/**/*" , //这个设置如果没有的话，tsc在生成文件时将发出一个错误
+  ]
 }
