@@ -1,10 +1,10 @@
 import resolve from '@rollup/plugin-node-resolve';
-import babel from '@rollup/plugin-babel';
+import babel, {getBabelOutputPlugin} from '@rollup/plugin-babel';
 import commonjs from 'rollup-plugin-commonjs';
 import { terser } from 'rollup-plugin-terser';
 import { eslint } from 'rollup-plugin-eslint';
-const path = require('path');
 import typescript from 'rollup-plugin-typescript2';
+const path = require('path');
 
 const isDev = process.env.NODE_ENV !== 'production';
 
@@ -16,10 +16,17 @@ export default {
       modulesOnly: true,
     }),
     typescript(),
+    // getBabelOutputPlugin({
+    //     configFile: path.resolve(__dirname, '.babelrc.json'),
+    //     allowAllFormats: true
+    // }),
     babel({
-      exclude: 'node_modules/**',
+      exclude: '**/node_modules/**',
       babelHelpers: 'runtime',
-      extensions: ['.js', '.ts'],
+      extensions: ['.ts'],
+      plugins: [
+        ['@babel/plugin-transform-runtime', { corejs: 3 }],
+      ],
     }),
     commonjs(), //  Rollup convert `ms` to a esmodule
     eslint({
@@ -32,5 +39,5 @@ export default {
 
     !isDev && terser(),
   ],
-  external: ['d3'],
+  external: ['d3',id => id.includes('@babel/runtime')],
 };

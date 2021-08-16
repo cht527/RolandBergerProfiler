@@ -1,12 +1,11 @@
 {
   "compilerOptions": {
     "module": "esnext",
-    "outDir": "dist",
     "target": "esnext",
     "baseUrl": ".", // 工作根目录
     "sourceMap": true,
     "declarationDir": "dist/es",
-    "lib": ["dom", "dom.iterable", "esnext"],
+    "lib": ["dom", "esnext"],
     "allowJs": false,
     "allowSyntheticDefaultImports": true,
     "forceConsistentCasingInFileNames": true,
@@ -18,9 +17,10 @@
     "skipLibCheck": true,
     "moduleResolution": "node",
     "esModuleInterop": true,
+    "outDir": "dist",
      // 只生成类型文件，不转换代码
      "declaration": true,
-     "emitDeclarationOnly": true,
+    //  "emitDeclarationOnly": true,
   },
   "include": ["src/**/*"],
   "exclude":[
@@ -29,6 +29,5 @@
     "dist",
     "lib",
     "es",
-    "dist/**/*" , //这个设置如果没有的话，tsc在生成文件时将发出一个错误
   ]
 }

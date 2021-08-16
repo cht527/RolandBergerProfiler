@@ -2,17 +2,20 @@
   "name": "rolandbergergraph",
   "version": "1.0.0",
   "description": "罗兰贝格消费者价值观分布图",
-  "main": "dist/index.js",
-  "module": "dist/index.js",
-  "types": "dist/index.d.ts",
+  "main": "lib/index.js",
+  "module": "es/index.js",
+  "types": "es/index.d.ts",
+  "unpkg": "dist/index.min.js",
   "files": [
     "/dist"
   ],
   "scripts": {
     "commit": "git-cz",
-    "build": "run-s clean dist",
-    "clean": "rimraf es dist",
-    "lib": "tsc -p tsconfig.json --target ES5 --module ESNext --outDir es",
+    "build": "run-s clean lib dist",
+    "clean": "rimraf lib es dist",
+    "lib": "run-p lib:*",
+    "lib:cjs": "tsc -p tsconfig.json --target ES5 --module commonjs --outDir lib",
+    "lib:es": "tsc -p tsconfig.json --target ES5 --module ESNext --outDir es",
     "dist": "NODE_ENV=production  rollup -c",
     "dev": "rollup -c -w",
     "lint-fix": "eslint --ext .js,.ts --fix --debug",
@@ -46,6 +49,7 @@
     "lint-staged": "^11.1.2"
   },
   "devDependencies": {
+    "@babel/plugin-external-helpers": "^7.14.5",
     "@babel/preset-env": "^7.15.0",
     "@babel/preset-typescript": "^7.15.0",
     "@commitlint/cli": "^13.1.0",
@@ -54,6 +58,7 @@
     "@rollup/plugin-json": "^4.1.0",
     "@rollup/plugin-node-resolve": "^13.0.4",
     "@types/d3": "^7.0.0",
+    "babel-plugin-external-helpers": "^6.22.0",
     "commitlint-config-cz": "^0.13.2",
     "cz-conventional-changelog": "^3.3.0",
     "cz-customizable": "^6.3.0",

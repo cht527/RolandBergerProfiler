@@ -10,6 +10,7 @@ export default {
     // dir: 'dist',
     file: path.resolve(__dirname,`dist/index.js`),
     format: 'esm', // es module for import and tree shaking
-    sourcemap: true,
+    sourcemap: process.env.NODE_ENV === 'production' ? false : 'inline'
+    ,
   }
 }

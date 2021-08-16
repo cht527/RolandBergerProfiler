@@ -1,16 +1,12 @@
 {
-  "presets": [
-    [
-      "@babel/preset-env",
-      {
-        "modules": false
-      }
-    ],
-    [
-      "@babel/preset-typescript"
-    ]
+  "presets":[
+    ["@babel/preset-env", {
+      "useBuiltIns": "usage",
+      "corejs": 3
+    }]
   ],
   "plugins": [
+    ["@babel/plugin-external-helpers"],
     [
       "@babel/plugin-transform-runtime",
       {
