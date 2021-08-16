@@ -20,7 +20,6 @@
     "outDir": "dist",
      // 只生成类型文件，不转换代码
      "declaration": true,
-    //  "emitDeclarationOnly": true,
   },
   "include": ["src/**/*"],
   "exclude":[
