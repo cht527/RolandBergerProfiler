@@ -75,7 +75,7 @@ export function init(dom: HTMLElement, opts?: ChartInitOpts): RolandBergerType {
     return existInstance;
   }
   const _chartId = `rolandBerger_${idBase++}`;
-  const chart = new RolandBerger(dom, { ...opts, id: _chartId });
+  const chart = new RolandBerger(dom, { ...opts, id: dom.id });
   chart.id = _chartId;
   instances[chart.id] = chart;
 

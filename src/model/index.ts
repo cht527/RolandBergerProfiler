@@ -27,7 +27,7 @@ class Model{
         const { width, height, margin, threshold} = this.options;
         this._w = width - margin.left - margin.right;
         this._h = height - margin.top - margin.bottom;
-        // dataProcess
+        // dataProcess        
         this._data = this.options.data.map(d => ({
             ...d,
             x: d.x * this._w,
@@ -42,6 +42,10 @@ class Model{
 
         this.drawWord();
         this.prepareData();
+    }
+
+    getWeight(x1:number, y1:number, x2:number, y2:number, range:number) {
+        return Math.pow(Math.E, -0.5 * (Math.pow(x1 - x2, 2) + Math.pow(y1 - y2, 2)) / range / range);
     }
 
     draw(data:number[], max: number){
@@ -100,18 +104,16 @@ class Model{
         const points = this._data.slice();
 
         let data:number[] = []; // width * height
-        const getWeight = function (x1:number, y1:number, x2:number, y2:number, range:number) {
-          return Math.pow(Math.E, -0.5 * (Math.pow(x1 - x2, 2) + Math.pow(y1 - y2, 2)) / range / range);
-        };
+        
         let max = 0;
         let rangeSize = this.options.rangeRatio * Math.min(width, height);
         for (let i = 0, l = width * height; i < l; i++) {
             let w = i % width;
             let h = Math.floor(i / width);
             let sum = 0;
-            points.forEach(function (p) {
+            points.forEach(p=> {
                 let range = rangeSize * p.value;
-                let weight = getWeight(w, h, p.x, p.y, range);
+                let weight = this.getWeight(w, h, p.x, p.y, range);
                 sum += weight * p.value;
             });
             data[i] = sum;

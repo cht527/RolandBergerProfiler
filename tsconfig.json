@@ -4,7 +4,6 @@
     "target": "esnext",
     "baseUrl": ".", // 工作根目录
     "sourceMap": true,
-    "declarationDir": "dist/es",
     "lib": ["dom", "esnext"],
     "allowJs": false,
     "allowSyntheticDefaultImports": true,
