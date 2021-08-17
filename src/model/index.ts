@@ -2,7 +2,6 @@
 import * as d3 from 'd3';
 import {RBOption, RBdata} from '../util/types';
 import {getArea} from '../util'
-import {areaList} from '../model/const';
 
 class Model{ 
     
@@ -129,7 +128,7 @@ class Model{
     }
 
     drawWord() {
-        const { margin, id, data } = this.options;
+        const { margin, id } = this.options;
         const _width = this._w;
         const _height = this._h;
         d3.select(this._container)
@@ -171,7 +170,7 @@ class Model{
         // words
         
         svg.selectAll(`.tag-name-${id}`)
-            .data(data)
+            .data(this._data)
             .enter()
             .append('text')
             .attr('class', `tag-name-${id}`)
@@ -193,6 +192,29 @@ class Model{
         // area words
 
         const orient = getArea(_width,_height);
+
+        const areaList = [
+            {
+                x: 10,
+                y: 20,
+                text: '简约感性区',
+            },
+            {
+                x: _width - 90,
+                y: 20,
+                text: '消费升级区',
+            },
+            {
+                x: 10,
+                y: _height - 10,
+                text: '价格敏感区',
+            },
+            {
+                x: _width - 90,
+                y: _height - 10,
+                text: '体验理性区',
+            },
+        ]
 
         svg.selectAll('.title')
             .data(orient)
