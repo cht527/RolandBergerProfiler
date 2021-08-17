@@ -4,7 +4,6 @@ import commonjs from 'rollup-plugin-commonjs';
 import typescript from 'rollup-plugin-typescript2';
 const path = require('path');
 
-
 export default {
   input: path.resolve(__dirname, 'src/index.ts'),
   plugins: [
@@ -25,5 +24,5 @@ export default {
     commonjs(), //  Rollup convert `ms` to a esmodule
     
   ],
-  external:  id => id.includes('@babel/runtime') || id.includes('d3'),
+  external: []
 };

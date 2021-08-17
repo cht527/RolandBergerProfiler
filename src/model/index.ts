@@ -1,5 +1,5 @@
 
-import d3 from 'd3';
+import * as d3 from 'd3';
 import {RBOption, RBdata} from '../util/types';
 import {getArea} from '../util'
 import {areaList} from '../model/const';
@@ -36,7 +36,9 @@ class Model{
         }));
         this._container = document.getElementById(this.options.id) as HTMLElement; // id or dom node
 
-        this._container.style.cssText = `width:${width};height:${height};position:relative`;
+        this._container.style.width = `${width}px`;
+        this._container.style.height = `${height}px`;
+        this._container.style.position = 'relative';
 
         this._canvas = document.getElementById(`${this.options.id}_canvas`) as HTMLCanvasElement;
 
@@ -127,7 +129,7 @@ class Model{
     }
 
     drawWord() {
-        const { margin, id } = this.options;
+        const { margin, id, data } = this.options;
         const _width = this._w;
         const _height = this._h;
         d3.select(this._container)
@@ -140,7 +142,6 @@ class Model{
             .attr('height', _height + margin.top + margin.bottom)
             .attr('style', `position:absolute;z-index:50;`)
             .append('g')
-            .attr('class', `tag-g-${id}`)
             .attr('transform', 'translate(' + margin.left + ',' + margin.top + ')');
          // line
          const lineData = [
@@ -166,7 +167,31 @@ class Model{
                 .attr('stroke', '#E4E9EDFF')
                 .attr('stroke-width', '1px');
         });
+
+        // words
         
+        svg.selectAll(`.tag-name-${id}`)
+            .data(data)
+            .enter()
+            .append('text')
+            .attr('class', `tag-name-${id}`)
+            .attr('x', d=> d.x)
+            .attr('y', d=> d.y)
+            .attr('dominant-baseline', 'central')
+            .attr('text-anchor', 'middle')
+            .attr('data', d => d.name)
+            .style('cursor', 'pointer')
+            .style('fill', '#333')
+            .text(d => d.name)
+            .style('font-size', '14px');
+        svg.append('rect')
+            .attr('fill', 'none')
+            .attr('stroke', '#E4E9ED')
+            .attr('width', _width)
+            .attr('height', _height);
+        
+        // area words
+
         const orient = getArea(_width,_height);
 
         svg.selectAll('.title')
@@ -205,7 +230,6 @@ class Model{
             .style('font-family', 'monospace')
             // .style('writing-mode', function (d) { return d.writingMode })
             .text(d=> d.text);
-
 
     }
 

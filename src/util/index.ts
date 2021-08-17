@@ -11,32 +11,32 @@ export const getArea = (width: number, height: number) => [
 	{
 		x: 0,
 		y: height / 2 + 1,
-		text: '消费-',
-		width: 40,
+		text: '-',
+		width: 26,
 		height: 26,
 		// writingMode: 'tb-rl'
 	},
 	{
 		x: width,
 		y: height / 2 + 1,
-		text: '消费+',
-		width: 40,
+		text: '+',
+		width: 26,
 		height: 26,
 		// writingMode: 'tb-rl'
 	},
 	{
 		x: width / 2,
 		y: 0,
-		text: 'E 感性需求',
-		width: 80,
+		text: 'E',
+		width: 26,
 		height: 26,
 		// writingMode: 'horizontal-tb'
 	},
 	{
 		x: width / 2,
 		y: height,
-		text: 'R 理性需求',
-		width: 80,
+		text: 'R',
+		width: 26,
 		height: 26,
 		// writingMode: 'horizontal-tb'
 	},

@@ -40,12 +40,12 @@ const builds = {
       file: path.resolve(__dirname, pkg.unpkg.replace(/(.\w+)$/, '.min$1')),
       name: 'rolandberger',
       sourcemap:isDev,
-      globals: {
-        "@babel/runtime-corejs3/core-js-stable/instance/map":"_mapInstanceProperty",
-        "@babel/runtime-corejs3/core-js-stable/instance/slice":"_sliceInstanceProperty",        
-        "@babel/runtime-corejs3/core-js-stable/instance/for-each":"_forEachInstanceProperty",
-        "d3": "d3"
-      }
+      // globals: {
+      //   // "@babel/runtime-corejs3/core-js-stable/instance/map":"_mapInstanceProperty",
+      //   // "@babel/runtime-corejs3/core-js-stable/instance/slice":"_sliceInstanceProperty",        
+      //   // "@babel/runtime-corejs3/core-js-stable/instance/for-each":"_forEachInstanceProperty",
+      //   "d3": "d3"
+      // }
     },
     plugins: [isDev && serve(SERVE_CONFIG)],
     
