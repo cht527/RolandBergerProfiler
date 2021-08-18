@@ -6,14 +6,14 @@ RolandBerger Profiler（罗兰贝格消费者价值元素分布图）
 
 通过大规模的定量调查和针对性研究，罗兰·贝格公司最终从中归纳出了19个最核心的消费者价值需求元素。此外，特别针对中国的研究还发现，中国消费者拥有一个独特的价值元素——追求，即追求更高的生活质量，渴望成功和被他人认可。如下表所示：
 
-![example](https://cht527.oss-cn-shanghai.aliyuncs.com/consumer1.png)
+![image](https://cht527.oss-cn-shanghai.aliyuncs.com/consumer1.png)
 
-![example](https://cht527.oss-cn-shanghai.aliyuncs.com/consumer2.png)
+![image](https://cht527.oss-cn-shanghai.aliyuncs.com/consumer2.png)
 
 
 在罗列出消费者核心价值元素后，需要将这些元素整合到一个分析框架中以明确各元素彼此之间的关系以及其对品牌的影响。为此，建立具有两个维度的矩阵：纵轴表示某价值元素属于理性元素（rational）还是感性元素（emotional），横轴表示该价值元素对消费者起促进作用（＋）还是抑制作用（－）。这样一来，整个平面就被划分为四个象限：刺激（Stimulation）、解决方案（Solutions）、朴实（Solidarity）和价格（Price）。这四个象限代表了消费者价值元素的四个类别。其中，刺激代表了追求感性上的享受和满足，包括刺激/乐趣、追求等元素；解决方案代表了对质量和功能方面的理性价值的追求，包括质量、服务等元素；朴实代表了自我约束的价值观，包括自然、安逸等元素；而价格则代表了出于价格因素而约束消费，包括全面成本和明知购物等元素。借助多维元素相关性分析的数学方法，确定各个价值元素在矩阵中的相对位置。下图是中国消费者的价值元素分布图
 
-![example](https://cht527.oss-cn-shanghai.aliyuncs.com/rolandberger.png)
+![image](https://cht527.oss-cn-shanghai.aliyuncs.com/rolandberger.png)
 
 
 -，抑制消费的元素；
