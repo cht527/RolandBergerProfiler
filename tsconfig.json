@@ -16,14 +16,13 @@
     "skipLibCheck": true,
     "moduleResolution": "node",
     "esModuleInterop": true,
-    "outDir": "dist",
+    "outDir": "lib",
      // 只生成类型文件，不转换代码
      "declaration": true,
   },
   "include": ["src/**/*"],
   "exclude":[
     "node_modules",
-    "build",
     "dist",
     "lib",
     "es",
