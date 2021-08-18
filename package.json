@@ -1,99 +1,100 @@
 {
-  "name": "rolandbergergraph",
-  "version": "1.1.0",
-  "description": "罗兰贝格消费者价值观分布图",
-  "main": "lib/index.js",
-  "module": "es/index.js",
-  "unpkg": "dist/index.js",
-  "types": "lib/index.d.ts",
-  "files": [
-    "/dist",
-    "/es",
-    "/lib"
-  ],
-  "scripts": {
-    "commit": "git-cz",
-    "build": "run-s clean lib",
-    "clean": "rimraf lib es dist",
-    "lib": "run-p lib:*",
-    "lib:cjs": "NODE_ENV=production rollup -c  --environment FORMAT:cjs",
-    "lib:esm": "NODE_ENV=production rollup -c  --environment FORMAT:esm",
-    "lib:umd": "NODE_ENV=production rollup -c  --environment FORMAT:umd",
-    "dev": "NODE_ENV=development rollup -c -w",
-    "lint-fix": "eslint --ext .js,.ts --fix --debug",
-    "lint:prettier": "npm run prettier && prettier --check \"src/**.{js,ts}\" --end-of-line auto",
-    "prettier": "prettier --write \"**/**.{js,ts}\"",
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "release": "standard-version"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/cht527/rolandBergerGraph.git"
-  },
-  "keywords": [
-    "罗兰贝格",
-    "rolandberger",
-    "消费者价值观"
-  ],
-  "author": "Cao Haitao",
-  "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/cht527/rolandBergerGraph/issues"
-  },
-  "homepage": "https://github.com/cht527/rolandBergerGraph#readme",
-  "dependencies": {
-    "@babel/core": "^7.15.0",
-    "@babel/plugin-transform-runtime": "^7.15.0",
-    "@babel/runtime": "^7.15.3",
-    "babel-preset-latest": "^6.24.1",
-    "d3": "^7.0.0",
-    "husky": "^7.0.1",
-    "lint-staged": "^11.1.2"
-  },
-  "devDependencies": {
-    "@babel/plugin-external-helpers": "^7.14.5",
-    "@babel/plugin-proposal-class-properties": "^7.14.5",
-    "@babel/plugin-syntax-dynamic-import": "^7.8.3",
-    "@babel/plugin-transform-typescript": "^7.15.0",
-    "@babel/preset-env": "^7.15.0",
-    "@babel/preset-typescript": "^7.15.0",
-    "@babel/runtime-corejs3": "^7.15.3",
-    "@commitlint/cli": "^13.1.0",
-    "@commitlint/config-conventional": "^13.1.0",
-    "@rollup/plugin-babel": "^5.3.0",
-    "@rollup/plugin-node-resolve": "^13.0.4",
-    "@types/d3": "^7.0.0",
-    "babel-plugin-external-helpers": "^6.22.0",
-    "commitlint-config-cz": "^0.13.2",
-    "cz-conventional-changelog": "^3.3.0",
-    "cz-customizable": "^6.3.0",
-    "eslint-config-prettier": "^8.3.0",
-    "npm-run-all": "^4.1.5",
-    "prettier": "^2.3.2",
-    "rimraf": "^3.0.2",
-    "rollup-plugin-commonjs": "^10.1.0",
-    "rollup-plugin-eslint": "^7.0.0",
-    "rollup-plugin-serve": "^1.1.0",
-    "rollup-plugin-terser": "^7.0.2",
-    "rollup-plugin-typescript2": "^0.30.0",
-    "standard-version": "^9.3.1",
-    "typescript": "^4.3.5"
-  },
-  "config": {
-    "commitizen": {
-      "path": "node_modules/cz-customizable"
+    "name": "rolandbergergraph",
+    "version": "1.1.0",
+    "description": "罗兰贝格消费者价值观分布图",
+    "main": "lib/index.js",
+    "module": "es/index.js",
+    "unpkg": "dist/index.js",
+    "types": "lib/index.d.ts",
+    "files": [
+        "/dist",
+        "/es",
+        "/lib"
+    ],
+    "scripts": {
+        "commit": "git-cz",
+        "build": "run-s clean lib",
+        "clean": "rimraf lib es dist",
+        "lib": "run-p lib:*",
+        "lib:cjs": "cross-env NODE_ENV=production rollup -c  --environment FORMAT:cjs",
+        "lib:esm": "cross-env NODE_ENV=production rollup -c  --environment FORMAT:esm",
+        "lib:umd": "cross-env NODE_ENV=production rollup -c  --environment FORMAT:umd",
+        "dev": "cross-env NODE_ENV=development rollup -c -w",
+        "lint-fix": "eslint --ext .js,.ts --fix --debug",
+        "lint:prettier": "npm run prettier && prettier --check \"src/**.{js,ts}\" --end-of-line auto",
+        "prettier": "prettier --write \"**/**.{js,ts}\"",
+        "test": "echo \"Error: no test specified\" && exit 1",
+        "release": "standard-version"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/cht527/rolandBergerGraph.git"
+    },
+    "keywords": [
+        "罗兰贝格",
+        "rolandberger",
+        "消费者价值观"
+    ],
+    "author": "Cao Haitao",
+    "license": "MIT",
+    "bugs": {
+        "url": "https://github.com/cht527/rolandBergerGraph/issues"
+    },
+    "homepage": "https://github.com/cht527/rolandBergerGraph#readme",
+    "dependencies": {
+        "@babel/core": "^7.15.0",
+        "@babel/plugin-transform-runtime": "^7.15.0",
+        "@babel/runtime": "^7.15.3",
+        "babel-preset-latest": "^6.24.1",
+        "d3": "^7.0.0",
+        "husky": "^7.0.1",
+        "lint-staged": "^11.1.2"
+    },
+    "devDependencies": {
+        "@babel/plugin-external-helpers": "^7.14.5",
+        "@babel/plugin-proposal-class-properties": "^7.14.5",
+        "@babel/plugin-syntax-dynamic-import": "^7.8.3",
+        "@babel/plugin-transform-typescript": "^7.15.0",
+        "@babel/preset-env": "^7.15.0",
+        "@babel/preset-typescript": "^7.15.0",
+        "@babel/runtime-corejs3": "^7.15.3",
+        "@commitlint/cli": "^13.1.0",
+        "@commitlint/config-conventional": "^13.1.0",
+        "@rollup/plugin-babel": "^5.3.0",
+        "@rollup/plugin-node-resolve": "^13.0.4",
+        "@types/d3": "^7.0.0",
+        "babel-plugin-external-helpers": "^6.22.0",
+        "commitlint-config-cz": "^0.13.2",
+        "cross-env": "^7.0.3",
+        "cz-conventional-changelog": "^3.3.0",
+        "cz-customizable": "^6.3.0",
+        "eslint-config-prettier": "^8.3.0",
+        "npm-run-all": "^4.1.5",
+        "prettier": "^2.3.2",
+        "rimraf": "^3.0.2",
+        "rollup-plugin-commonjs": "^10.1.0",
+        "rollup-plugin-eslint": "^7.0.0",
+        "rollup-plugin-serve": "^1.1.0",
+        "rollup-plugin-terser": "^7.0.2",
+        "rollup-plugin-typescript2": "^0.30.0",
+        "standard-version": "^9.3.1",
+        "typescript": "^4.3.5"
+    },
+    "config": {
+        "commitizen": {
+            "path": "node_modules/cz-customizable"
+        }
+    },
+    "husky": {
+        "hooks": {
+            "pre-commit": "lint-staged",
+            "commit-msg": "commitlint -e $GIT_PARAMS"
+        }
+    },
+    "lint-staged": {
+        "*.{js,ts}": [
+            "npm run lint-fix",
+            "git add"
+        ]
     }
-  },
-  "husky": {
-    "hooks": {
-      "pre-commit": "lint-staged",
-      "commit-msg": "commitlint -e $GIT_PARAMS"
-    }
-  },
-  "lint-staged": {
-    "*.{js,ts}": [
-      "npm run lint-fix",
-      "git add"
-    ]
-  }
 }
