@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.2.0](https://github.com/cht527/rolandBergerGraph/compare/v1.1.0...v1.2.0) (2021-08-18)
+
+
+### Features
+
+* **env:** add cross-env ([70d77b1](https://github.com/cht527/rolandBergerGraph/commit/70d77b1464d3247e6f212d6d8007206288851b6b))
+
 ## 1.1.0 (2021-08-18)
 
 
