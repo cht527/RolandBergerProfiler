@@ -3,7 +3,7 @@ import { Margin, RBcolor, RBOption } from "../util/types";
 
 import Model from "../model";
 
-type ChartInitOpts = {
+export type ChartInitOpts = {
   size?: number;
 };
 

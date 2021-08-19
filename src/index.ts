@@ -1,8 +1,8 @@
-import { init } from '../src/core/rolandBerger';
+import { init as rolandbergerInit , ChartInitOpts} from './core/rolandBerger';
+
 export default {
-    init() {
-        // @ts-ignore
-        return init.apply(null, arguments);
+    init(dom: HTMLElement, opts?: ChartInitOpts) {
+        rolandbergerInit(dom,opts);
     },
 };
 //# sourceMappingURL=index.js.map
