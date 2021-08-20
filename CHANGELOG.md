@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.2.2](https://github.com/cht527/rolandBergerGraph/compare/v1.2.1...v1.2.2) (2021-08-20)
+
+
+### Bug Fixes
+
+* **instance init:** return instance ([8995739](https://github.com/cht527/rolandBergerGraph/commit/8995739f1cb1262b12f63b3076589638ac1636f7))
+
 ### [1.2.1](https://github.com/cht527/rolandBergerGraph/compare/v1.2.0...v1.2.1) (2021-08-19)
 
 
