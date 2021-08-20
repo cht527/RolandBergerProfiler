@@ -28,10 +28,17 @@ R，理性消费的元素；
 
 越往上的元素感性程度越高。
 
-示例输入:
 
 ```
-[
+安装： npm install 
+
+本地预览： npm run dev
+
+在工程开发中使用：
+
+import rolandberger from 'rolandbergergraph';
+
+const data = [
     {"id":0,"name":"安逸","x":0.22,"y":0.25,"value":0.75},
     {"id":1,"name":"刺激乐趣","x":0.81,"y":0.07,"value":0.07},
     {"id":2,"name":"定制化","x":0.78,"y":0.91,"value":0.31},
@@ -53,4 +60,9 @@ R，理性消费的元素；
     {"id":18,"name":"自然","x":0.26,"y":0.21,"value":0.55},
     {"id":19,"name":"自由自在","x":0.61,"y":0.30,"value":0.69}
   ]
+const rGraph = rolandberger.init(document.getElementById('container'));
+        
+rGraph.setOption({
+   data
+})
 ```
