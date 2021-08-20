@@ -24,5 +24,4 @@ export default {
     commonjs(), //  Rollup convert `ms` to a esmodule
     
   ],
-  external: []
 };

@@ -54,9 +54,11 @@ const builds = {
 }
 
 const runtimeConfig = process.env.NODE_ENV === 'production' ? builds[process.env.FORMAT || 'esm'] : builds['umd'];
-
+const externalFormat = ['esm','cjs'];
 export default {
   ...baseConfig,
   output:runtimeConfig.output,
-  plugins: [...baseConfig.plugins, ...runtimeConfig.plugins]
+  plugins: [...baseConfig.plugins, ...runtimeConfig.plugins],
+  external: externalFormat.includes(process.env.FORMAT) ? id => id.includes('@babel/runtime') : []
+
 };
