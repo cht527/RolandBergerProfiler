@@ -24,7 +24,7 @@
         "lint:prettier": "npm run prettier && prettier --check \"src/**.{js,ts}\" --end-of-line auto",
         "prettier": "prettier --write \"**/**.{js,ts}\"",
         "test": "echo \"Error: no test specified\" && exit 1",
-        "release": "standard-version"
+        "release": "standard-version && git push --follow-tags origin master && npm publish"
     },
     "repository": {
         "type": "git",
