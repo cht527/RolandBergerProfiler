@@ -7,9 +7,7 @@ export type ChartInitOpts = {
   size?: number;
 };
 
-interface RolandBergerOpts extends ChartInitOpts {
-  id: string;
-}
+interface RolandBergerOpts extends ChartInitOpts {}
 
 const defaultColor: RBcolor = {
   pos: { r: 255, g: 0, b: 0 },
@@ -21,10 +19,10 @@ const defaultMargin: Margin = { top: 20, right: 20, bottom: 20, left: 20 };
 class RolandBerger {
   id: string = "";
   private _dom: HTMLElement;
-  private _opts: RolandBergerOpts;
+  private _opts?: RolandBergerOpts;
   private _model!: Model;
 
-  constructor(dom: HTMLElement, opts: RolandBergerOpts) {
+  constructor(dom: HTMLElement, opts?: RolandBergerOpts) {
     this._opts = opts;
     this._dom = dom;
   }
@@ -41,9 +39,9 @@ class RolandBerger {
     if (!this._model) {
       const _opt: Required<RBOption> = {
         ...option,
-        id: this._opts.id,
-        width: this._opts.size || 512,
-        height: this._opts.size || 512,
+        id: this._dom.id,
+        width: this._opts?.size || 512,
+        height: this._opts?.size || 512,
         color: option.color ?? defaultColor,
         margin: option.margin ?? defaultMargin,
         threshold: option.threshold ?? 0.5,
@@ -75,7 +73,7 @@ export function init(dom: HTMLElement, opts?: ChartInitOpts): RolandBergerType {
     return existInstance;
   }
   const _chartId = `rolandBerger_${idBase++}`;
-  const chart = new RolandBerger(dom, { ...opts, id: dom.id });
+  const chart = new RolandBerger(dom, opts);
   chart.id = _chartId;
   instances[chart.id] = chart;
 
