@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.2.11](https://github.com/cht527/rolandBergerGraph/compare/v1.2.10...v1.2.11) (2021-08-21)
+
+
+### Bug Fixes
+
+* **id param:** setoption id ([6260e35](https://github.com/cht527/rolandBergerGraph/commit/6260e35c70b8e0593f0469afdf441ac68259136d))
+
 ### [1.2.10](https://github.com/cht527/rolandBergerGraph/compare/v1.2.9...v1.2.10) (2021-08-20)
 
 
