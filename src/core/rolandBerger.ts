@@ -39,7 +39,6 @@ class RolandBerger {
     if (!this._model) {
       const _opt: Required<RBOption> = {
         ...option,
-        id: this._dom.id,
         width: this._opts?.size || 512,
         height: this._opts?.size || 512,
         color: option.color ?? defaultColor,
@@ -47,7 +46,7 @@ class RolandBerger {
         threshold: option.threshold ?? 0.5,
         rangeRatio: option.rangeRatio ?? 0.2,
       };
-      this._model = new Model(_opt);
+      this._model = new Model({..._opt,id: this._dom.id});
     }
 
     this._model.drawWord();

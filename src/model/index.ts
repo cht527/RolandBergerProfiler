@@ -5,7 +5,7 @@ import {getArea} from '../util'
 
 class Model{ 
     
-    options: Required<RBOption>;
+    options: Required<RBOption> & {id : string};
 
     private _w: number = 0;
 
@@ -17,7 +17,7 @@ class Model{
 
     private _canvas!: HTMLCanvasElement; 
 
-    constructor(opt: Required<RBOption>){
+    constructor(opt: Required<RBOption> & {id : string}){
         this.options = opt;
         this.init()
     }

@@ -25,7 +25,6 @@ export type Margin = {
 };
 
 export type RBOption = {
-	id: string;
 	data: RBdata[];
 	threshold?: number;
 	rangeRatio?: number;
