@@ -1,7 +1,11 @@
-
+/*
+ * Original code by jdk137
+ * https://github.com/jdk137/RolandBergerProfiler/blob/master/js/profiler.js
+*/
 import * as d3 from 'd3';
 import {RBOption, RBdata} from '../util/types';
 import {getArea} from '../util'
+
 
 class Model{ 
     
@@ -45,6 +49,7 @@ class Model{
         this.prepareData();
     }
 
+   
     getWeight(x1:number, y1:number, x2:number, y2:number, range:number) {
         return Math.pow(Math.E, -0.5 * (Math.pow(x1 - x2, 2) + Math.pow(y1 - y2, 2)) / range / range);
     }
