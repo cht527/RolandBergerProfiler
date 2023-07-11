@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.3.0](https://github.com/cht527/rolandBergerGraph/compare/v1.2.13...v1.3.0) (2023-07-11)
+
+
+### Features
+
+* add reference ([76bc250](https://github.com/cht527/rolandBergerGraph/commit/76bc250c2f9928a46df92c02e1dc8aeaea095f28))
+
 ### [1.2.13](https://github.com/cht527/rolandBergerGraph/compare/v1.2.12...v1.2.13) (2021-08-21)
 
 
