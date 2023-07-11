@@ -1,6 +1,6 @@
-import { terser } from 'rollup-plugin-terser';
 import serve from 'rollup-plugin-serve'
 import baseConfig from './rollup.base.config';
+import terser from '@rollup/plugin-terser'; 
 
 const path = require('path');
 const pkg = require('./package.json');
@@ -58,7 +58,7 @@ const externalFormat = ['esm','cjs'];
 export default {
   ...baseConfig,
   output:runtimeConfig.output,
-  plugins: [...baseConfig.plugins, ...runtimeConfig.plugins],
+  plugins: [...baseConfig.plugins, ...runtimeConfig.plugins, !isDev && terser()],
   external: externalFormat.includes(process.env.FORMAT) ? id => id.includes('@babel/runtime') : []
 
 };
