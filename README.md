@@ -102,7 +102,7 @@ rGraph.setOption({
 
 Q: 指数如何取值？
 
-<img src="https://cht527.oss-cn-shanghai.aliyuncs.com/exicon.png"  width="400"/>
+<img src="https://cht527.oss-cn-shanghai.aliyuncs.com/exicon.png"  width="200"/>
 
 A:
 
