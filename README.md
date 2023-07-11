@@ -77,9 +77,9 @@ const data = [
     {"id":18,"name":"自然","x":0.26,"y":0.21,"value":0.55},
     {"id":19,"name":"自由自在","x":0.61,"y":0.30,"value":0.69}
   ]
-const rGraph = rolandberger.init(document.getElementById('container'));
+const rolandBergerGraph = rolandberger.init(document.getElementById('container'));
         
-rGraph.setOption({
+rolandBergerGraph.setOption({
    data
 })
 ```
