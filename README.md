@@ -7,10 +7,10 @@ RolandBerger Profiler（罗兰贝格消费者价值元素分布图）
 
 通过大规模的定量调查和针对性研究，罗兰·贝格公司最终从中归纳出了19个最核心的消费者价值需求元素。此外，特别针对中国的研究还发现，中国消费者拥有一个独特的价值元素——追求，即追求更高的生活质量，渴望成功和被他人认可。如下表所示：
 
-<img src="https://cht527.oss-cn-shanghai.aliyuncs.com/consumer1.png"  width="400"/>
+<img src="https://cht527.oss-cn-shanghai.aliyuncs.com/consumer1.png"  width="500"/>
 
 
-<img src="https://cht527.oss-cn-shanghai.aliyuncs.com/consumer2.png"  width="400"/>
+<img src="https://cht527.oss-cn-shanghai.aliyuncs.com/consumer2.png"  width="500"/>
 
 
 在罗列出消费者核心价值元素后，需要将这些元素整合到一个分析框架中以明确各元素彼此之间的关系以及其对品牌的影响。为此，建立具有两个维度的矩阵：
@@ -31,7 +31,7 @@ RolandBerger Profiler（罗兰贝格消费者价值元素分布图）
 
 借助多维元素相关性分析的数学方法，确定各个价值元素在矩阵中的相对位置。下图是中国消费者的价值元素分布图
 
-<img src="https://cht527.oss-cn-shanghai.aliyuncs.com/rolandberger.png"  width="400"/>
+<img src="https://cht527.oss-cn-shanghai.aliyuncs.com/rolandberger.png"  width="500"/>
 
 -，抑制消费的元素；
 
