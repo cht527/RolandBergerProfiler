@@ -4,11 +4,15 @@ import commonjs from '@rollup/plugin-commonjs';
 import typescript from '@rollup/plugin-typescript';
 const path = require('path');
 
+const isDev = process.env.NODE_ENV !== 'production';
+
 export default {
   input: path.resolve(__dirname, 'src/index.ts'),
   plugins: [
     resolve(),
-    typescript(),
+    typescript({
+      sourceMap: isDev
+    }),
     babel({
       exclude: '**/node_modules/**',
       babelHelpers: 'runtime',
