@@ -2,6 +2,18 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.3.4](https://github.com/cht527/rolandBergerGraph/compare/v1.3.3...v1.3.4) (2023-07-12)
+
+
+### Bug Fixes
+
+* 🐛 commit type missing ([ba524a3](https://github.com/cht527/rolandBergerGraph/commit/ba524a39a34de390757195c5b02370c771a235ed))
+
+
+### Chore
+
+* 🤖 change lint rule & remove useless deps ([0ae733c](https://github.com/cht527/rolandBergerGraph/commit/0ae733c8d8e8ee77a9f80c66ee995de598159abc))
+
 ## [1.3.3](https://github.com/cht527/rolandBergerGraph/compare/v1.3.2...v1.3.3) (2023-07-12)
 
 
