@@ -33,5 +33,5 @@ module.exports = {
 			name: 'revert: Revert to a commit',
 		},
 	],
-	allowBreakingChanges: ['feat', 'fix', 'refactor', 'perf', 'build', 'revert'],
+	allowBreakingChanges: ['feat', 'fix', "docs", 'refactor', 'perf', 'build', 'revert'],
 };

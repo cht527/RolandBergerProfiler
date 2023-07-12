@@ -1,7 +1,7 @@
-import * as utils from "../util";
-import { Margin, RBcolor, RBOption } from "../util/types";
+import * as utils from '../util';
+import { Margin, RBcolor, RBOption } from '../util/types';
 
-import Model from "../model";
+import Model from '../model';
 
 export type ChartInitOpts = {
   size?: number;
@@ -17,7 +17,7 @@ const defaultColor: RBcolor = {
 const defaultMargin: Margin = { top: 20, right: 20, bottom: 20, left: 20 };
 
 class RolandBerger {
-  id: string = "";
+  id: string = '';
   private _dom: HTMLElement;
   private _opts?: RolandBergerOpts;
   private _model!: Model;
@@ -55,7 +55,7 @@ class RolandBerger {
 }
 
 const instances: { [id: string]: RolandBerger } = {};
-const DOM_ATTRIBUTE_KEY = "_rolandBerger_instance_";
+const DOM_ATTRIBUTE_KEY = '_rolandBerger_instance_';
 let idBase: number = +new Date() - 0;
 
 export function getInstanceByDom(dom: HTMLElement): RolandBergerType {
@@ -64,11 +64,11 @@ export function getInstanceByDom(dom: HTMLElement): RolandBergerType {
 
 export function init(dom: HTMLElement, opts?: ChartInitOpts): RolandBergerType {
   if (!dom) {
-    throw new Error("Initialize failed: invalid dom.");
+    throw new Error('Initialize failed: invalid dom.');
   }
   const existInstance = getInstanceByDom(dom);
   if (existInstance) {
-    console.warn("There is a chart instance already initialized on the dom.");
+    console.warn('There is a chart instance already initialized on the dom.');
     return existInstance;
   }
   const _chartId = `rolandBerger_${idBase++}`;

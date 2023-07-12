@@ -10,10 +10,11 @@
     "SharedArrayBuffer": "readonly",
     "ENV": true
   },
+  "parser": "@typescript-eslint/parser",
   "parserOptions": {
     "project": "./tsconfig.json",
     "tsconfigRootDir": ".",
-    "ecmaVersion": 2018,
+    "ecmaVersion": 6,
     "sourceType": "module"
   },
   "rules": {

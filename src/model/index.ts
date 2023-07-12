@@ -62,7 +62,7 @@ class Model{
         this._canvas = document.createElement('canvas') as HTMLCanvasElement;
         const currentCtx = this._canvas.getContext('2d') as CanvasRenderingContext2D;
         this._canvas.id = `${this.options.id}_canvas`;
-        this._canvas.style.cssText = `position:absolute;top:20px;left:20px;`;
+        this._canvas.style.cssText = 'position:absolute;top:20px;left:20px;';
         this._container.appendChild(this._canvas);
 
         const tempCanvas = document.createElement('canvas') as HTMLCanvasElement;
@@ -144,7 +144,7 @@ class Model{
             .append('svg')
             .attr('width', _width + margin.left + margin.right)
             .attr('height', _height + margin.top + margin.bottom)
-            .attr('style', `position:absolute;z-index:50;`)
+            .attr('style', 'position:absolute;z-index:50;')
             .append('g')
             .attr('transform', 'translate(' + margin.left + ',' + margin.top + ')');
          // line
