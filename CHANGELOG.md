@@ -2,6 +2,18 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.3.3](https://github.com/cht527/rolandBergerGraph/compare/v1.3.2...v1.3.3) (2023-07-12)
+
+
+### Bug Fixes
+
+* relase token error ([c63a23a](https://github.com/cht527/rolandBergerGraph/commit/c63a23a46855c0376f667019ca8ecaf08e8e17f2))
+
+
+### Doc
+
+* udpate ([17e6390](https://github.com/cht527/rolandBergerGraph/commit/17e63909cf0b16bd2d0e6c28b5629d42153f7f22))
+
 ## [1.3.2](https://github.com/cht527/rolandBergerGraph/compare/v1.3.1...v1.3.2) (2023-07-11)
 
 
