@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.3.5](https://github.com/cht527/rolandBergerGraph/compare/v1.3.4...v1.3.5) (2023-07-12)
+
+
+### Bug Fixes
+
+* 🐛 npm-run-all missing ([ad86b68](https://github.com/cht527/rolandBergerGraph/commit/ad86b68465d02a7827409808eac2e5de134a54d1))
+
 ## [1.3.4](https://github.com/cht527/rolandBergerGraph/compare/v1.3.3...v1.3.4) (2023-07-12)
 
 
