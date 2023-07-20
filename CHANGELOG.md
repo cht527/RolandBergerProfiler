@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.3.6](https://github.com/cht527/rolandBergerGraph/compare/v1.3.5...v1.3.6) (2023-07-20)
+
+
+### Doc
+
+* ✏️ update graph Explaination ([88fc710](https://github.com/cht527/rolandBergerGraph/commit/88fc710541625c179d1d8b05f74f1df4ff4130a6))
+
 ## [1.3.5](https://github.com/cht527/rolandBergerGraph/compare/v1.3.4...v1.3.5) (2023-07-12)
 
 
