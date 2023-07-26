@@ -1,6 +1,6 @@
 {
     "name": "rolandbergergraph",
-    "version": "1.3.6",
+    "version": "1.3.7",
     "description": "罗兰贝格消费者价值观分布图",
     "main": "lib/index.js",
     "module": "es/index.js",
