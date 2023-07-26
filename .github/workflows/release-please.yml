@@ -18,7 +18,7 @@ jobs:
         with:
           token: ${{ secrets.RELEASE_TOKEN }}
           release-type: node
-          package-name: rolandbergergraph
+          package-name: rolandbergerprofiler
           changelog-types: '[{"type": "feat", "section":"Features","hidden":false},{"type": "test", "section":"Test","hidden":false},{"type": "fix", "section":"Bug Fixes","hidden":false},{"type": "style", "section":"Styling","hidden":false},{"type": "refactor", "section":"Code Refactor","hidden":false},{"type": "docs", "section":"Doc","hidden":false},{"type": "chore", "section":"Chore","hidden":false}]'
       # Checkout
       - uses: actions/checkout@v3

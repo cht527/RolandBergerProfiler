@@ -69,7 +69,7 @@ RolandBerger Profiler（罗兰贝格消费者价值元素分布图）
 
 在工程开发中使用：
 
-import rolandberger from 'rolandbergergraph';
+import rolandberger from 'rolandbergerprofiler';
 
 const data = [
     {"id":0,"name":"安逸","x":0.22,"y":0.25,"value":0.75},
@@ -93,9 +93,9 @@ const data = [
     {"id":18,"name":"自然","x":0.26,"y":0.21,"value":0.55},
     {"id":19,"name":"自由自在","x":0.61,"y":0.30,"value":0.69}
   ]
-const rolandBergerGraph = rolandberger.init(document.getElementById('container'));
+const rolandBergerProfiler = rolandberger.init(document.getElementById('container'));
         
-rolandBergerGraph.setOption({
+rolandBergerProfiler.setOption({
    data
 })
 ```
