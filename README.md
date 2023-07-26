@@ -100,34 +100,3 @@ rolandBergerGraph.setOption({
 })
 ```
 
-### 三、色值梯度计算
-
-实现原理：基于基色(红、蓝)在二维平面（给定宽、高）对每一像素绘制不同透明度的像素点。
-
-
-1、透明度需要满足以下条件：
-
-（1）取值范围：0~1
-（2）梯度变化规律非线性
-
-选取指数函数作为模型：
-
-<img src="https://cht527.oss-cn-shanghai.aliyuncs.com/ex.png"  width="400"/>
-
-2、建立标签位置、分数与绘制颜色的对应关系
-
-Q: 指数如何取值？
-
-<img src="https://cht527.oss-cn-shanghai.aliyuncs.com/exicon.png"  width="200"/>
-
-A:
-
-<img src="https://cht527.oss-cn-shanghai.aliyuncs.com/efinal.png"  width="400"/>
-
-其中，
-
-x1 = width; y1 = height;
-
-range = rangeRatio * Math.min(width, height)*value;
-
-rangeRatio是可调节的系数
