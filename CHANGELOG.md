@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.4.0](https://github.com/cht527/RolandBergerProfiler/compare/v1.3.7...v1.4.0) (2023-07-26)
+
+
+### Features
+
+* update package name ([1df3f33](https://github.com/cht527/RolandBergerProfiler/commit/1df3f33ede22dfeb6cf13c3d6a13bcc3311557ac))
+
 ## [1.3.7](https://github.com/cht527/rolandBergerGraph/compare/v1.3.6...v1.3.7) (2023-07-26)
 
 
