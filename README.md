@@ -1,5 +1,17 @@
 RolandBerger Profiler（罗兰贝格消费者价值元素分布图）
 ==
+<div align="center">
+
+![Language](https://img.shields.io/badge/language-typescript-blue)
+![NPM version](https://img.shields.io/npm/v/rolandbergerprofiler?color=fd9a16)
+![Gzip size](https://img.badgesize.io/https:/unpkg.com/rolandbergerprofiler/dist/index.min.js?label=gzip%20size&compression=gzip)
+![GitHub](https://img.shields.io/npm/l/rolandbergerprofiler)
+
+
+
+</div>
+
+
 
 ### 一、基本概念
 透视消费者价值观念
