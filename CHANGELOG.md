@@ -2,6 +2,28 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.5.0](https://github.com/cht527/RolandBergerProfiler/compare/v1.4.1...v1.5.0) (2023-08-06)
+
+
+### Features
+
+* change ingnore rule ([0bcb455](https://github.com/cht527/RolandBergerProfiler/commit/0bcb4558f9c397b9c9091ed8faf50b6dfb3a93b7))
+
+
+### Bug Fixes
+
+* conflict ([e1a113f](https://github.com/cht527/RolandBergerProfiler/commit/e1a113fa39ea14dbf7601c7f15963ff9d09c700b))
+
+
+### Code Refactor
+
+* change config type to mjs ([2648470](https://github.com/cht527/RolandBergerProfiler/commit/2648470cf824f04520fee141f135bccc01ba19cf))
+
+
+### Chore
+
+* remove babel ([cfa994b](https://github.com/cht527/RolandBergerProfiler/commit/cfa994b2da5157564e95b4cfbdf7fb51bbc7c608))
+
 ## [1.4.1](https://github.com/cht527/RolandBergerProfiler/compare/v1.4.0...v1.4.1) (2023-08-01)
 
 
