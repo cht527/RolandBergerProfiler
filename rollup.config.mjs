@@ -1,9 +1,14 @@
+import path from "path";
+import { fileURLToPath } from "node:url"
+
 import serve from 'rollup-plugin-serve'
-import baseConfig from './rollup.base.config';
+import baseConfig from './rollup.base.config.mjs';
 import terser from '@rollup/plugin-terser'; 
 
-const path = require('path');
-const pkg = require('./package.json');
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
+
+import pkg from './package.json' assert {type: 'json'};
 const isDev = process.env.NODE_ENV !== 'production';
 
 const SERVE_CONFIG = {
@@ -54,11 +59,9 @@ const builds = {
 }
 
 const runtimeConfig = process.env.NODE_ENV === 'production' ? builds[process.env.FORMAT || 'esm'] : builds['umd'];
-const externalFormat = ['esm','cjs'];
 export default {
   ...baseConfig,
   output:runtimeConfig.output,
   plugins: [...baseConfig.plugins, ...runtimeConfig.plugins, !isDev && terser()],
-  external: externalFormat.includes(process.env.FORMAT) ? id => id.includes('@babel/runtime') : []
 
 };
