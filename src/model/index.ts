@@ -2,7 +2,7 @@
  * Original code by jdk137
  * https://github.com/jdk137/RolandBergerProfiler/blob/master/js/profiler.js
 */
-import * as d3 from 'd3';
+import * as d3 from 'd3-selection';
 import {RBOption, RBdata} from '../util/types';
 import {getArea} from '../util'
 
